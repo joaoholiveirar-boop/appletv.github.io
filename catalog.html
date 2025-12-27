@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Apple TV+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="apple-header">
+        <div class="apple-logo">
+            <img src="https://hyken.com/wp-content/uploads/2023/01/Apple-TV-Logo-2019-present.png" alt="Apple TV Logo">
+        </div>
+        
+        <nav class="apple-nav">
+            <a href="index.html">Início</a>
+            <a href="live.html">Live</a>
+            <a href="catalog.html" class="active">Catálogo</a>
+        </nav>
+        
+        <div class="apple-actions">
+            <button class="search-btn" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+            <button class="user-btn" onclick="toggleUserMenu()"><i class="fas fa-user"></i></button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <input type="text" placeholder="Buscar filmes, séries, documentários...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" style="margin-top: 100px; padding: 40px 60px;">
+        <div class="page-header">
+            <h1 class="page-title">
+                <i class="fas fa-film" style="margin-right: 15px;"></i>
+                Catálogo Completo
+            </h1>
+            <p class="page-subtitle">Todos os conteúdos disponíveis no Apple TV+</p>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+            <button class="category-btn active">Todos</button>
+            <button class="category-btn">Filmes</button>
+            <button class="category-btn">Séries</button>
+            <button class="category-btn">Documentários</button>
+            <button class="category-btn">Infantil</button>
+            <button class="category-btn">Esportes</button>
+        </div>
+
+        <!-- Catalog Grid -->
+        <div class="catalog-grid">
+            <!-- Item 1 -->
+            <div class="catalog-item">
+                <div class="item-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80" alt="Movie">
+                    <div class="item-overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>See</h3>
+                    <p class="item-description">Em um futuro distante, a raça humana perdeu o sentido da visão...</p>
+                    <div class="item-meta">
+                        <span class="item-year">2019</span>
+                        <span class="item-rating"><i class="fas fa-star"></i> 8.3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="catalog-item">
+                <div class="item-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80" alt="Movie">
+                    <div class="item-overlay">
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>The Morning Show</h3>
+                    <p class="item-description">Dentro do mundo da televisão matinal e as mulheres que lutam...</p>
+                    <div class="item-meta">
+                        <span class="item-year">2019</span>
+                        <span class="item-rating"><i class="fas fa-star"></i> 8.4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="apple-footer">
+        <div class="footer-logo">
+            <img src="https://hyken.com/wp-content/uploads/2023/01/Apple-TV-Logo-2019-present.png" alt="Apple TV Logo">
+        </div>
+        <p>Copyright © 2023 Apple Inc. Todos os direitos reservados.</p>
+        <p>Catálogo completo disponível no Apple TV+</p>
+    </footer>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

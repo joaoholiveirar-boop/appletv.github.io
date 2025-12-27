@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBS+ | Apple TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Popup CBS -->
+    <div class="popup-overlay" id="cbsPopup">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 class="popup-title">Direitos de Transmissão</h2>
+            <p class="popup-message">
+                A CBS não possui os direitos de transmissão do Lady Gaga Apple Music Fenty Bowl.<br><br>
+                Este conteúdo está disponível exclusivamente no Apple TV+.
+            </p>
+            <button class="popup-button" onclick="fecharPopup()">Entendi</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="apple-header">
+        <div class="apple-logo">
+            <img src="https://hyken.com/wp-content/uploads/2023/01/Apple-TV-Logo-2019-present.png" alt="Apple TV Logo">
+        </div>
+        
+        <nav class="apple-nav">
+            <a href="index.html" class="active">Início</a>
+            <a href="live.html">Live</a>
+            <a href="catalog.html">Catálogo</a>
+        </nav>
+        
+        <div class="apple-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="user-btn" onclick="toggleUserMenu()"><i class="fas fa-user"></i></button>
+        </div>
+
+        <!-- User Menu Dropdown -->
+        <div class="user-menu" id="userMenu">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <h3>Convidado</h3>
+                    <p>convidado@apple.com</p>
+                </div>
+            </div>
+            <div class="menu-items">
+                <a href="#" class="menu-item"><i class="fas fa-user-circle"></i> Minha Conta</a>
+                <a href="#" class="menu-item"><i class="fas fa-play-circle"></i> Minha Lista</a>
+                <a href="#" class="menu-item"><i class="fas fa-history"></i> Histórico</a>
+                <a href="#" class="menu-item"><i class="fas fa-cog"></i> Configurações</a>
+                <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>EXCLUSIVO APPLE TV+</span>
+            </div>
+            
+            <h1 class="hero-title">NBA All-Star Halftime Show Louise</h1>
+            
+            <p class="hero-description">O espetáculo mais esperado do ano! Assista à performance inédita de Louise no intervalo do NBA All-Star Game, com produção cinematográfica premium da Apple TV+.</p>
+            
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="irParaNbaLouise()">
+                    <i class="fas fa-play"></i>
+                    Assistir Agora
+                </button>
+                <button class="btn-secondary" onclick="maisInfoLouise()">
+                    <i class="fas fa-info-circle"></i>
+                    Mais Informações
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Originais Section -->
+    <section class="originals-section" id="originais">
+        <div class="section-header">
+            <h2 class="section-title">Originais</h2>
+        </div>
+        
+        <div class="posters-grid">
+            <!-- Poster 1 - Lady Gaga -->
+            <div class="poster-container" onclick="abrirPopupCBS()">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX9P2j2MjIjIzkO-yNB3HtENFWk2dp2DE_ripgV5okgFZcc5Al5czn3H61sGZfouOj6Lv0nV7nxMCbIRjz-Ye93NsOBsRrCgmOy10rQj7JjsIY64aLwAGw4skd-kTR9hlHYJzJzmofcav_ww9nlRWHwOjWhm51nWOPV4X4Jd6Vd_xQCO8H5GGVBxKrjp_P/s2100/poster.png" 
+                     alt="Lady Gaga Halftime Show" 
+                     class="poster-image">
+                <div class="poster-overlay">
+                    <i class="fas fa-play play-icon"></i>
+                </div>
+            </div>
+            
+            <!-- Poster 2 - NBA All-Star -->
+            <div class="poster-container" onclick="irParaNbaLouise()">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX_x5vkq65cDMXsp5-Mwdf9CvReUI9cKiJOEcuZplLmQktIVP2a-of9cUxrjz6H-mmlZjGx9Il9OhZRG4UtmdgnhpVv-opRoT9rXWTQcKOtdD45njyKSZAFHJjzFKixuFylSOIz12UbU-B6xdmQjcNzKrJmERnm9hsdiZSpmzsmUxt4fIdyRtBx38LYyJw/s2100/alltst.png" 
+                     alt="NBA All-Star Halftime Show Louise" 
+                     class="poster-image">
+                <div class="poster-overlay">
+                    <i class="fas fa-play play-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="apple-footer">
+        <div class="footer-logo">
+            <img src="https://hyken.com/wp-content/uploads/2023/01/Apple-TV-Logo-2019-present.png" alt="Apple TV Logo">
+        </div>
+        <p>Copyright © 2023 Apple Inc. Todos os direitos reservados.</p>
+        <p>Conteúdos exclusivos disponíveis no Apple TV+</p>
+    </footer>
+
+    <script src="script/main.js"></script>
+</body>
+</html>

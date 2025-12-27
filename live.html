@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lives | Apple TV+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="apple-header">
+        <div class="apple-logo">
+            <img src="https://hyken.com/wp-content/uploads/2023/01/Apple-TV-Logo-2019-present.png" alt="Apple TV Logo">
+        </div>
+        
+        <nav class="apple-nav">
+            <a href="index.html">Início</a>
+            <a href="live.html" class="active">Live</a>
+            <a href="catalog.html">Catálogo</a>
+        </nav>
+        
+        <div class="apple-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="user-btn" onclick="toggleUserMenu()"><i class="fas fa-user"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" style="margin-top: 100px; padding: 40px 60px;">
+        <div class="page-header">
+            <h1 class="page-title">
+                <i class="fas fa-broadcast-tower" style="margin-right: 15px; color: #ff375f;"></i>
+                Transmissões Ao Vivo
+            </h1>
+            <p class="page-subtitle">Eventos exclusivos em tempo real</p>
+        </div>
+
+        <!-- Live Events Grid -->
+        <div class="live-grid">
+            <!-- Evento 1 -->
+            <div class="live-card">
+                <div class="live-badge">AO VIVO AGORA</div>
+                <div class="live-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Live Event">
+                    <div class="live-overlay">
+                        <button class="btn-primary" onclick="watchLive(1)">
+                            <i class="fas fa-play"></i> Assistir
+                        </button>
+                    </div>
+                </div>
+                <div class="live-info">
+                    <h3>NBA Finals - Game 7</h3>
+                    <p class="live-description">Final do campeonato NBA com transmissão exclusiva Apple TV+</p>
+                    <div class="live-meta">
+                        <span><i class="far fa-clock"></i> 2h restantes</span>
+                        <span><i class="fas fa-eye"></i> 2.5M assistindo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 2 (Próximo) -->
+            <div class="live-card">
+                <div class="live-badge upcoming">PRÓXIMO</div>
+                <div class="live-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Upcoming Event">
+                    <div class="live-overlay">
+                        <button class="btn-secondary" onclick="setReminder(1)">
+                            <i class="far fa-bell"></i> Lembrete
+                        </button>
+                    </div>
+                </div>
+                <div class="live-info">
+                    <h3>Grammy Awards 2024</h3>
+                    <p class="live-description">Cerimônia completa com bastidores exclusivos</p>
+                    <div class="live-meta">
+                        <span><i class="far fa-calendar"></i> 15 Mar 2024, 20:00</span>
+                        <span><i class="far fa-clock"></i> 4h de duração</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="live-card">
+                <div class="live-badge upcoming">PRÓXIMO</div>
+                <div class="live-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300&q=80" alt="Upcoming Event">
+                    <div class="live-overlay">
+                        <button class="btn-secondary" onclick="setReminder(2)">
+                            <i class="far fa-bell"></i> Lembrete
+                        </button>
+                    </div>
+                </div>
+                <div class="live-info">
+                    <h3>Apple Keynote Special</h3>
+                    <p class="live-description">Lançamento de novos produtos Apple</p>
+                    <div class="live-meta">
+                        <span><i class="far fa-calendar"></i> 10 Abr 2024, 14:00</span>
+                        <span><i class="far fa-clock"></i> 2h de duração</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar Integration -->
+        <div class="calendar-section">
+            <h2><i class="far fa-calendar-alt"></i> Adicionar ao Google Agenda</h2>
+            <div class="calendar-events">
+                <div class="calendar-event">
+                    <h4>Grammy Awards 2024</h4>
+                    <p>15 de Março de 2024, 20:00 - 00:00</p>
+                    <button class="calendar-btn" onclick="addToGoogleCalendar('Grammy Awards 2024', '2024-03-15T20:00:00', '2024-03-16T00:00:00', 'Transmissão ao vivo no Apple TV+')">
+                        <i class="fab fa-google"></i> Adicionar ao Google Agenda
+                    </button>
+                </div>
+                <div class="calendar-event">
+                    <h4>Apple Keynote Special</h4>
+                    <p>10 de Abril de 2024, 14:00 - 16:00</p>
+                    <button class="calendar-btn" onclick="addToGoogleCalendar('Apple Keynote Special', '2024-04-10T14:00:00', '2024-04-10T16:00:00', 'Lançamento de novos produtos Apple - Transmissão exclusiva')">
+                        <i class="fab fa-google"></i> Adicionar ao Google Agenda
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="apple-footer">
+        <div class="footer-logo">
+            <img src="https://hyken.com/wp-content/uploads/2023/01/Apple-TV-Logo-2019-present.png" alt="Apple TV Logo">
+        </div>
+        <p>Copyright © 2023 Apple Inc. Todos os direitos reservados.</p>
+        <p>Transmissões ao vivo disponíveis no Apple TV+</p>
+    </footer>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
